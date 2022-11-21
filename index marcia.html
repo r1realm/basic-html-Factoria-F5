@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recreacion web</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/animate.css">
+    <script src="https://kit.fontawesome.com/03b4809eb0.js" crossorigin="anonymous"></script><!-- fontawesome  -->
+</head>
+<body>
+    <header>
+        <ul id="menu">
+            <img class="logo" src="./img/logo.png" alt="logo">
+            <li>Products</li>
+            <li>Startup tools</li>
+            <li>Features</li>
+            <li>Live Suport</li>
+            <li>Our plans</li>
+            <li class="bold">My account</li>
+        </ul>
+    </header>
+    <div class="intro">
+        <div class="imgIntro">
+            <a href="#"><img src="./img/sofa.png" alt="chichaSentada"></a>
+            
+        </div>
+        <div class="txtIntro">
+            <h1 class="h1">Seed your <br>startup</h1>
+            <p class="pIntro">All the resources you need for a<br> succesful start in one place</p>
+            <div class="buttons">
+                <button class="rueda" id="blackBtn">Get started today</button>
+                <button class="shake" id="grayBtn">Our plans</button>
+            </div>    
+        </div>
+    </div>    
+    <div class="info">
+        <div class="bigBox">
+            <div class="box1">
+                <img src="./img/panas.png" alt="hombres con maletin">
+            </div>
+            <div class="box2">
+                <h3>Free life support</h3>
+                <p class="pInfo">We're always here whanever you need us, our free live support will answer all your questions immediately.</p>
+            </div>
+        </div>
+        <div class="bigBox">
+            <div class="box1">
+                <img src="./img/ed.png" alt="edsheeran">
+            </div>
+            <div class="box2">
+                 <h3>Building tools</h3>
+                <p class="pInfo">Our system provides the most intuitive interface built based on extensive user interaction and research.</p>
+            </div>
+        </div>
+        <div class="bigBox">
+            <div class="box1">
+                <img src="./img/jump.png" alt="mina saltando">
+            </div>
+            <div class="box2">
+                <h3>Community support</h3>
+                <p class="pInfo">All communications done through our platform is highly encrypted and fully secure, we care about privacy!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const daleCalor = () => {
+            const r = document.querySelector('.rueda');
+            r.classList.add('animate__animated');
+            r.classList.add('animate__rubberBand');
+            r.addEventListener('animationend', () => {
+                r.classList.remove('animate__animated', 'animate__rubberBand');
+            })
+        }
+        const menealo = () => {
+            const m = document.querySelector('.shake');
+            m.classList.add('animate__animated');
+            m.classList.add('animate__swing');
+            m.addEventListener('animationend', () => {
+                m.classList.remove('animate__animated', 'animate__swing');
+            })
+        }
+      
+        document.querySelector('#blackBtn').addEventListener('mouseover', daleCalor);
+        document.querySelector('#grayBtn').addEventListener('mouseover', menealo);
+    </script>
+
+    <footer>
+        <div class="footer">
+            <div class="footerMenu">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-dribbble"></i>
+                <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Other projects</a><a href="#">Help center</a>
+            </div>
+            <div class="copyrightMenu">
+                <p id="pFooter">&copy; Getillustrations.com - All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
